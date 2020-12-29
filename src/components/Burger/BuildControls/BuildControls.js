@@ -1,4 +1,5 @@
 import React from 'react';
+import { ProgressPlugin } from 'webpack';
 import BuildControl from './BuildControl/BuildControl';
 import classes from './BuildControls.css'
 
@@ -9,10 +10,13 @@ const controls = [
     {label: 'Bacon', type: 'bacon'},
 ]
 
-const buildControls = () => {
+const buildControls = (props) => {
     return ( 
         <div className={classes.BuildControls}>
-            {controls.map(control => <BuildControl key={control.label} label={control.label} />)}
+            {controls.map(control => <BuildControl 
+                key={control.label} 
+                label={control.label} 
+                added={() => props.ingredientAdded(control.type)}/>)}
         </div>
     );
 }
