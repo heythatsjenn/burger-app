@@ -77,9 +77,6 @@ class BurgerBuilder extends Component {
     }
 
     render() {
-
-        console.log(this.state.purchasing);
-
         let disabledInfo = {...this.state.ingredients}
         for(let key in disabledInfo){
             disabledInfo[key] = disabledInfo[key] <= 0;
