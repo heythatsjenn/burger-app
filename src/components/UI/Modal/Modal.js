@@ -6,7 +6,7 @@ import classes from './Modal.css';
 const modal = (props) => {
     return ( 
         <Auxiliary>
-            <Backdrop show={props.show} cancel={() => props.purchaseHandler(false)}/>
+            <Backdrop show={props.show} clicked={() => props.purchaseHandler(false)}/>
             <div className={classes.Modal}
                 style={{
                     transform: props.show? 'translateY(0)' : 'translateY(-100vh)',
