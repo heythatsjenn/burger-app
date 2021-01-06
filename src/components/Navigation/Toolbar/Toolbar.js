@@ -2,11 +2,12 @@ import React from 'react';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import classes from './Toolbar.css'
+import Menu from '../Menu/Menu'
 
-const toolbar = () => {
+const toolbar = (props) => {
     return ( 
         <header className={classes.Toolbar}>
-            <div>MENU</div>
+            <Menu open={props.open}/>
             <div className={classes.Logo}>
                 <Logo/>
             </div>
